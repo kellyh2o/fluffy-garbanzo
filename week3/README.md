@@ -11,11 +11,11 @@ Serving our website to a browser and extend our website's capabilities with an A
 npm install
 ```
 
-3. Run server instance (either one works):
+2. Run server instance
 
 ```bash
-node server/index.js # dev server instance
-
+node server/index.js 
 ```
 
+3. Go to http://localhost:3000 in a browser
 
