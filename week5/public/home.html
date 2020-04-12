@@ -12,31 +12,31 @@
     <div class="main wrapper">
       <header>
         <nav>
-          <ul>
+          <ul class="nav-list">
             <li><a href="/">Home</a></li>
             <li><a href="/about.html">About</a> </li>
           </ul>
+          <div>
+            <a id="login" href="/login.html">Login</a>
+            <a id="logout" href="" onclick="doLogout(event)">Logout</a>
+          </div>
         </nav>
       </header>
     </div>
 
     <div class="content">
-      <div class="center">
-        <h2>Some stuff about a site.</h2>        
+      <div id="locations">
+        <div>Loading...</div>
       </div>
     </div>
 
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
-      </nav>
-    </footer>
-
   </body>
-  <script src="./src/service-helpers.js"></script>
+  <script src="./src/api.config.js.js"></script>
+  <script src="./src/simple-storage.js.js"></script>
+  <script src="./src/service-helpers.js.js"></script>
   <script src="./src/auth.service.js"></script>
+  <script src="./src/locations.service.js"></script>
+  <script src="./src/route-guard.js.js"></script>
+  <script src="./src/build-tasks-list.js.js"></script>
   <script src="./src/app.js"></script>
 </html>

@@ -1,16 +1,12 @@
-const BASE_API_URL = 'http://localhost:3001/v1';
 const AUTH_API = `${BASE_API_URL}/auth`;
 const USER_API = `${BASE_API_URL}/user`;
 
-const USERS_API = `${BASE_API_URL}/users`;
-const USER_BY_ID_API = function(userId) {
-    return `${USERS_API}/${userId}`;
-}
+const register = (formData) => _post(`${AUTH_API}/register`, formData);
 
-function register(formData) {
-    return _post(`${AUTH_API}/register`, formData);
-}
+const login = (formData) => _post(`${AUTH_API}/login`, formData);
 
-function login(formData) {
-    return _post(`${AUTH_API}/login`, formData);
-}
+const logout = () => {
+    clearStorage('isAuth');
+    clearStorage('access_token');
+    clearStorage('refresh_token');
+};
