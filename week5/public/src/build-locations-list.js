@@ -26,11 +26,11 @@
             const checkboxSpan = document.createElement('span');
             const checkbox = document.createElement('input');
             checkbox.setAttribute('type', 'checkbox');
-            checkboxSpan.className('location-checkbox');
+            //checkboxSpan.className('location-checkbox');
             checkboxSpan.appendChild(checkbox);
 
             const nameSpan = document.createElement('span');
-            nameSpan.className = 'location-name';
+            //nameSpan.className = 'location-name';
             nameSpan.innerText = location.name;
 
             const dateSpan = document.createElement('span');
