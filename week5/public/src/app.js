@@ -7,6 +7,7 @@ const doLogin = function(e) {
         username: username,
         password: password
     }).then(function(res) {
+        console.log(res);
         if (res.ok) {
             window.location.href = 'home.html';
         }
