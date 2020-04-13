@@ -7,8 +7,9 @@ const doLogin = function(e) {
         username: username,
         password: password
     }).then(function(res) {
-        console.log(res);
-        if (res.ok) {
+        if (res.auth) {
+            setStorage('isAuth', true);
+            setStorage('access_token', res.accessToken);
             window.location.href = 'home.html';
         }
     });

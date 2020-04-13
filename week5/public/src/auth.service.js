@@ -1,4 +1,3 @@
-const BASE_API_URL = 'http://localhost:3000/v1';
 const AUTH_API = `${BASE_API_URL}/auth`;
 const USER_API = `${BASE_API_URL}/users`;
 
