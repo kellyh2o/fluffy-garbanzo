@@ -1,6 +1,6 @@
 
-const access_token = storageHasData() ? getStorage('access_token') : '';
-const token =  `Bearer ${access_token}`;
+const accessToken = storageHasData() ? getStorage('accessToken') : '';
+const token =  `Bearer ${accessToken}`;
 
 const _get = async (url) => {
     const res = await fetch(url, {

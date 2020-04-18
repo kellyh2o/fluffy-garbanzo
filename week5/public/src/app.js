@@ -9,7 +9,7 @@ const doLogin = function(e) {
     }).then(function(res) {
         if (res.auth) {
             setStorage('isAuth', true);
-            setStorage('access_token', res.accessToken);
+            setStorage('accessToken', res.accessToken);
             window.location.href = 'home.html';
         }
     });
