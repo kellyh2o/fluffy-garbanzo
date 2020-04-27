@@ -42,7 +42,7 @@ describe('Bike Park Locations App', () => {
 
   });
 
-  xit('should update an individual task', () => {
+  xit('should update an individual location', () => {
     // ..
   });
 });
