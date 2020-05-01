@@ -41,8 +41,4 @@ describe('Bike Park Locations App', () => {
     expect(locations.locations.length).toBe(0);
 
   });
-
-  xit('should update an individual location', () => {
-    // ..
-  });
 });
