@@ -1,5 +1,4 @@
 const AUTH_API = `${BASE_API_URL}/auth`;
-const USER_API = `${BASE_API_URL}/users`;
 
 /**
  * @class AuthService

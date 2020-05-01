@@ -7,14 +7,24 @@ const doLogin = async (e) => {
   try {
     const res = await authService.login({ username, password});
     const { auth, expiresIn, accessToken, refreshToken } = res;
-    const expiryDate = authService.setExpiration(expiresIn);
 
-    setStorage('isAuth', auth);
-    setStorage('expiresIn', expiryDate);
-    setStorage('accessToken', accessToken);
-    setStorage('refreshToken', refreshToken);
+    if (auth) {
+      setStorage('isAuth', auth);
+    }
+    if (expiresIn) {
+      const expiryDate = authService.setExpiration(expiresIn);
+      setStorage('expiresIn', expiryDate);
+    }
+    if (accessToken) {
+      setStorage('accessToken', accessToken);
+    }
+    if (refreshToken) {
+      setStorage('refreshToken', refreshToken);
+    }
 
-    if (res) {
+    if (res.status && res.status !== 200) {
+      alert('Incorrect username or password.' );
+    } else {
       window.location.href = "locations/locations.html";
     }
   } catch (err) {

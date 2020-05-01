@@ -4,7 +4,7 @@ var https = require('https');
 const app = express();
 
 const httpPort = process.env.PORT || 3000;
-const httpsPort = process.env.HTTPS_PORT || 4443;
+const httpsPort = process.env.HTTPS_PORT || 3443;
 
 app.use(express.static('public'));
 

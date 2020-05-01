@@ -48,7 +48,12 @@ const _post = async (url, data, options = DEFAULT_OPTIONS) => {
     body: JSON.stringify(data),
   });
 
-  return res.json();
+  if (res.status === 200 || res.status === 202) {
+    return res.json();
+  }
+  else {
+    return res;
+  }
 };
 
 /**
